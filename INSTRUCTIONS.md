@@ -1,3 +1,7 @@
+# June 7th, 2021
+I want to sharpen my fundamentals, so I'm going to try to create this project on front end mentor.
+
+
 # Frontend Mentor - Blogr landing page
 
 ![Design preview for the Blogr landing page coding challenge](./design/desktop-preview.jpg)
