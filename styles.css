@@ -1,10 +1,20 @@
 body {
   font-family: 'Ubuntu', sans-serif;
   font-family: 'Overpass', sans-serif;
+  user-select: none;
+  margin: 0;
 }
+
 
 button {
   font-family: 'Ubuntu', sans-serif;
+  border: 1px solid white;
+  padding: 9px 18px;
+  border-radius: 1.25em;  
+  background-color: white;
+  font-weight: 500;
+  color:hsl(356, 100%, 66%);
+  
 }
 
 ul {
@@ -15,7 +25,10 @@ ul {
 
 nav {
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
+  position: relative;
+  /* ? is this good practice? */
+  left: -20%;
 }
 
 nav > ul {
@@ -25,6 +38,18 @@ nav > ul {
 h1 {
   text-align: center;
   font-size: 3em;
+}
+
+header {
+  color: white;
+  background-size:cover;
+  background-position:right;
+  /* background-blend-mode: lighten; */
+  /* background-image: linear-gradient(to left, hsl(353, 100%, 62%), hsl(13, 100%, 72%)),url("./images/bg-pattern-intro.svg"); */
+  background-image: linear-gradient(to left, hsl(353, 100%, 62%, .95), hsl(13, 100%, 72%, 0.9)),url("./images/bg-pattern-intro.svg");
+  padding: 20px 0px 100px 0px;
+  border-bottom-left-radius: 100px;
+  
 }
 
 header > h4 {
@@ -40,16 +65,21 @@ h2 {
 }
 
 .top-row-wrapper {
+  
+  width: 80%;
+  margin: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .nav-wrapper { 
   display: flex;
   flex-direction: row;
-  justify-content: space-around;  
+  justify-content: space-between;
+  align-items: baseline;
+  
 }
 
 .text-img-wrapper {
@@ -69,6 +99,35 @@ h2 {
   outline: 1px solid blue;
 }
 
-.login-signup-wrapper {
+button {
+
+}
+
+button:hover {
+  background-color: hsl(13, 100%, 72%);
+}
+
+.nav-heading {
+  padding-right: 0px;
+  height: 120px;
+  width: 8ch;
   
+}
+
+.nav-heading > ul {
+  display: none;
+}
+
+.nav-heading:hover ul {
+  display: inline;
+}
+
+.nav-inner-list > li:hover {
+  font-weight: bold;
+}
+
+.blogr-logo {
+  
+  font-weight: 700;
+  font-size: 2em;
 }
