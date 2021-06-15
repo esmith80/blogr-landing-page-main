@@ -26,16 +26,7 @@
 
     <title>Frontend Mentor | [Blogr]</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+   
   </head>
   <body>
     <header>
@@ -87,7 +78,7 @@
 
     <main>
       <h2>Designed for the future</h2>
-      <section class="text-img-wrapper">
+      <section class="text-img-wrapper editor-desktop">
         <div class="text-content-wrapper">
           <h3>Introducing an extensible editor</h3>
           <p>
@@ -106,13 +97,15 @@
           </p>
           
         </div>
-      <div class="img-wrapper">image placeholder</div>
+     
     </section>
 
-    <section class="text-img-wrapper">
+    <section class="text-img-wrapper phones-circles">
+<!-- todo these empty img-wrapper divs serve just to create space (50% in the css - is this the right approach?) -->
+      <div class="img-wrapper"></div>
 
-      <div class="img-wrapper">image placeholder</div>
 
+      <img src="images/illustration-phones.svg" alt="smartphones with blogr logo">
       <div class="text-content-wrapper">
       <h2>State of the Art Infrastructure</h2>
       <p>
@@ -123,9 +116,9 @@
       </p>
     </div>
       </section>
-      <section class="text-img-wrapper">
+      <section class="text-img-wrapper laptop-desktop">
 
-      <div class="img-wrapper">image placeholder</div>
+      <div class="img-wrapper"></div>
       <div class="text-content-wrapper">
 
       <h3>Free, open, simple</h3>
@@ -148,33 +141,39 @@
     <footer>
       <div class="blogr-logo">Blogr</div>
 
-      <div class="footer-ctgry">Product</div>
+      
+      <ul>
+        <div class="footer-ctgry">Product</div>
+        <li><a href="">Overview</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Marketplace</a></li>
+        <li><a href="">Features</a></li>
+        <li><a href="">Integrations</a></li>
+      </ul>
 
-      <a href="">Overview</a>
-      <a href="">Pricing</a>
-      <a href="">Marketplace</a>
-      <a href="">Features</a>
-      <a href="">Integrations</a>
+      
+      <ul>
+        <div class="footer-ctgry">Company</div>
+        <li><a href="">About</a></li>
+        <li><a href="">Team</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Careers</a></li>
+      </ul>
 
-      <div class="footer-ctgry">Company</div>
+      
+      <ul>
+        <div class="footer-ctgry">Connect</div>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Newsletter</a></li>
+        <li><a href="">LinkedIn</a></li>
+      </ul>
 
-      <a href="">About</a>
-      <a href="">Team</a>
-      <a href="">Blog</a>
-      <a href="">Careers</a>
-
-      <div class="footer-ctgry">Connect</div>
-
-      <a href="">Contact</a>
-      <a href="">Newsletter</a>
-      <a href="">LinkedIn</a>
-
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Edward Smith</a>.
-      </div>
     </footer>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Edward Smith</a>.
+    </div>
   </body>
 </html>

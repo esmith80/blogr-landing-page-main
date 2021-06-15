@@ -1,20 +1,18 @@
 body {
-  font-family: 'Ubuntu', sans-serif;
-  font-family: 'Overpass', sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Overpass", sans-serif;
   user-select: none;
   margin: 0;
 }
 
-
 button {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   border: 1px solid white;
   padding: 9px 18px;
-  border-radius: 1.25em;  
+  border-radius: 1.25em;
   background-color: white;
   font-weight: 500;
-  color:hsl(356, 100%, 66%);
-  
+  color: hsl(356, 100%, 66%);
 }
 
 ul {
@@ -35,6 +33,11 @@ nav > ul {
   padding-left: 2em;
 }
 
+p {
+  width: 50ch;
+  line-height: 1.8;
+}
+
 h1 {
   text-align: center;
   font-size: 3em;
@@ -42,30 +45,43 @@ h1 {
 
 header {
   color: white;
-  background-size:cover;
-  background-position:right;
+  background-size: cover;
+  background-position: right;
   /* background-blend-mode: lighten; */
   /* background-image: linear-gradient(to left, hsl(353, 100%, 62%), hsl(13, 100%, 72%)),url("./images/bg-pattern-intro.svg"); */
-  background-image: linear-gradient(to left, hsl(353, 100%, 62%, .95), hsl(13, 100%, 72%, 0.9)),url("./images/bg-pattern-intro.svg");
+  background-image: linear-gradient(
+      to left,
+      hsl(353, 100%, 62%, 0.95),
+      hsl(13, 100%, 72%, 0.9)
+    ),
+    url("./images/bg-pattern-intro.svg");
   padding: 20px 0px 100px 0px;
   border-bottom-left-radius: 100px;
-  
+  margin-bottom: 100px;
 }
 
 header > h4 {
   text-align: center;
 }
 
-h2 {
+main > h2 {
   text-align: center;
+  font-size: 2em;
+  margin-bottom: -2em;
 }
 
 .hdr-btm-buttons {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hdr-btm-buttons > button {
+  width: 10em;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .top-row-wrapper {
-  
   width: 80%;
   margin: auto;
   display: flex;
@@ -74,44 +90,41 @@ h2 {
   align-items: baseline;
 }
 
-.nav-wrapper { 
+.nav-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  
 }
 
 .text-img-wrapper {
   display: flex;
   flex-direction: row;
+  height: 40vh;
+  align-items: center;
 }
 
 .text-content-wrapper {
   width: 50%;
-  padding-left: 15%;
-  padding-right: 15%;
-  outline: 1px solid red;
+  padding-left: 10%;
+  padding-right: 10%;
+  /* margin-top: 10%; */
+  /* margin-bottom: 30%; */
 }
 
 .img-wrapper {
   width: 50%;
-  outline: 1px solid blue;
-}
-
-button {
-
 }
 
 button:hover {
   background-color: hsl(13, 100%, 72%);
+  color: white;
 }
 
 .nav-heading {
   padding-right: 0px;
   height: 120px;
   width: 8ch;
-  
 }
 
 .nav-heading > ul {
@@ -127,7 +140,83 @@ button:hover {
 }
 
 .blogr-logo {
-  
   font-weight: 700;
   font-size: 2em;
+}
+
+footer {
+  height: 25%;
+  border-top-right-radius: 125px;
+  padding: 4em 0em;
+  margin-top: 100px;
+  background-color: hsl(240, 10%, 16%);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  /* ? is this good practice? */
+  justify-content: space-evenly;
+  align-items: baseline;
+  line-height: 2;
+}
+
+footer > * {
+  margin-left: -10%;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(240, 2%, 79%);
+}
+
+.attribution {
+  background-color: hsl(240, 10%, 16%);
+
+  text-align: center;
+}
+
+.footer-ctgry {
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: white;
+}
+
+/* image background classes */
+
+.editor-desktop {
+  background-image: url("./images/illustration-editor-desktop.svg");
+  background-position: right -40% top 0px;
+  background-size: contain;
+
+  height: 800px;
+  /* margin: 5% 0;   */
+}
+
+.laptop-desktop {
+  background: url("./images/illustration-laptop-desktop.svg");
+  background-size: contain;
+  height: 700px;
+  margin-top: 100px;
+  background-position: left -44% top 0px;
+}
+
+.laptop-desktop > div {
+  padding-left: 20em;
+}
+
+.phones-circles {
+  background: url("./images/bg-pattern-circles.svg") -200px -550px;
+  background-color: hsl(237, 17%, 21%);
+  color: white;
+  /* todo these px values will create a huge radius on mobile - what's the better approach */
+  border-bottom-left-radius: 125px;
+  border-top-right-radius: 125px;
+  margin-top: 100px;
+}
+
+.editor-desktop,
+.laptop-desktop,
+.phones-circles {
+  /* background-size: contain; */
+  background-repeat: no-repeat;
 }
