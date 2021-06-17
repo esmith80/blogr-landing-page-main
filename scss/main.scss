@@ -1,22 +1,7 @@
 
-// text colors
-$cta-text-color: hsl(356, 100%, 66%);
-$heading-color: hsl(208, 49%, 24%);
-$light-text-color: hsl(0, 0%, 100%);
-$ftr-text-color: hsl(240, 2%, 79%);
-$body-text-color: hsl(207, 13%, 34%);
-// bg colors
-$ftr-bg-color: hsl(240, 10%, 16%);
-$cta-hover-bg-color: hsl(355, 100%, 74%);
-// gradient colors
-$intro-grd-dark-color: hsl(353, 100%, 62%);
-$intro-grd-light-color: hsl(13, 100%, 72%);
-$body-grd-dark-color: hsl(237, 17%, 21%);
-$body-grd-light-color: hsl(237, 23%, 32%);
-// fonts
-$ubuntu: "Ubuntu", sans-serif;
-$overpass: "Overpass", sans-serif;
-
+@import './colors';
+@import './typography';
+@import './responsive_mixin';
 
 body {
 
@@ -80,7 +65,7 @@ header {
       hsl(353, 100%, 62%, 0.95),
       hsl(13, 100%, 72%, 0.9)
     ),
-    url("./images/bg-pattern-intro.svg");
+    url("../images/bg-pattern-intro.svg");
   padding: 20px 0px 100px 0px;
   border-bottom-left-radius: 100px;
   margin-bottom: 100px;
@@ -220,7 +205,7 @@ a {
 /* image background classes */
 
 .editor-desktop {
-  background-image: url("./images/illustration-editor-desktop.svg");
+  background-image: url("../images/illustration-editor-desktop.svg");
   background-position: right -40% top 0px;
   background-size: contain;
   color: $body-text-color;
@@ -230,7 +215,7 @@ a {
 }
 
 .laptop-desktop {
-  background: url("./images/illustration-laptop-desktop.svg");
+  background: url("../images/illustration-laptop-desktop.svg");
   background-size: contain;
   height: 700px;
   margin-top: 100px;
@@ -243,7 +228,7 @@ a {
 }
 
 .phones-circles {
-  background: url("./images/bg-pattern-circles.svg") -200px -550px;
+  background: url("../images/bg-pattern-circles.svg") -200px -550px;
   background-color: hsl(237, 17%, 21%);
   color: white;
   /* todo these px values will create a huge radius on mobile - what's the better approach */

@@ -54,7 +54,7 @@ header {
   background-position: right;
   /* background-blend-mode: lighten; */
   /* background-image: linear-gradient(to left, hsl(353, 100%, 62%), hsl(13, 100%, 72%)),url("./images/bg-pattern-intro.svg"); */
-  background-image: linear-gradient(to left, rgba(255, 61, 84, 0.95), rgba(255, 143, 112, 0.9)), url("./images/bg-pattern-intro.svg");
+  background-image: linear-gradient(to left, rgba(255, 61, 84, 0.95), rgba(255, 143, 112, 0.9)), url("../images/bg-pattern-intro.svg");
   padding: 20px 0px 100px 0px;
   border-bottom-left-radius: 100px;
   margin-bottom: 100px;
@@ -190,7 +190,7 @@ a {
 
 /* image background classes */
 .editor-desktop {
-  background-image: url("./images/illustration-editor-desktop.svg");
+  background-image: url("../images/illustration-editor-desktop.svg");
   background-position: right -40% top 0px;
   background-size: contain;
   color: #4b5862;
@@ -200,7 +200,7 @@ a {
 }
 
 .laptop-desktop {
-  background: url("./images/illustration-laptop-desktop.svg");
+  background: url("../images/illustration-laptop-desktop.svg");
   background-size: contain;
   height: 700px;
   margin-top: 100px;
@@ -213,7 +213,7 @@ a {
 }
 
 .phones-circles {
-  background: url("./images/bg-pattern-circles.svg") -200px -550px;
+  background: url("../images/bg-pattern-circles.svg") -200px -550px;
   background-color: #2c2d3f;
   color: white;
   /* todo these px values will create a huge radius on mobile - what's the better approach */
