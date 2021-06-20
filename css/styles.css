@@ -13,10 +13,15 @@ button {
   font-family: "Ubuntu", sans-serif;
   border: 1px solid white;
   padding: 9px 18px;
-  border-radius: 1.25em;
-  background-color: white;
+  border-radius: 1.5em;
+  background-color: transparent;
   font-weight: 500;
-  color: #ff525d;
+  color: white;
+  width: 9em;
+  height: 3em;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1em;
 }
 
 ul {
@@ -29,12 +34,20 @@ nav {
   display: flex;
   flex-direction: row;
   position: relative;
-  /* ? is this good practice? */
-  left: -20%;
+  align-items: baseline;
 }
 
 nav > ul {
   padding-left: 2em;
+  color: #f2f2f2;
+}
+
+nav > ul:first-of-type {
+  margin-left: 3em;
+}
+
+.arrow-sml {
+  font-size: 0.75em;
 }
 
 p {
@@ -44,24 +57,30 @@ p {
 
 h1 {
   text-align: center;
-  font-size: 3em;
+  font-size: 3.75em;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 header {
   color: white;
-  background-size: 125%;
   background-repeat: no-repeat;
-  background-position: right;
   /* background-blend-mode: lighten; */
-  /* background-image: linear-gradient(to left, hsl(353, 100%, 62%), hsl(13, 100%, 72%)),url("./images/bg-pattern-intro.svg"); */
-  background-image: linear-gradient(to left, rgba(255, 61, 84, 0.95), rgba(255, 143, 112, 0.9)), url("../images/bg-pattern-intro.svg");
-  padding: 20px 0px 100px 0px;
+  background-image: url("../images/bg-pattern-intro.svg"), linear-gradient(to left, #ff3d54, #ff8f70);
+  background-position: -450px 52%, 0;
+  background-size: 230%, 100%;
+  padding: 50px 0px 150px 0px;
   border-bottom-left-radius: 100px;
   margin-bottom: 100px;
 }
 
-header > h4 {
+header > h3 {
   text-align: center;
+  color: #e6e6e6;
+  font-weight: 100;
+  font-size: 1.25em;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
 }
 
 main > h2 {
@@ -83,10 +102,9 @@ h3 {
   justify-content: center;
 }
 
-.hdr-btm-buttons > button {
-  width: 10em;
-  margin-left: 10px;
-  margin-right: 10px;
+.cta-button {
+  background-color: white;
+  color: #ff3d54;
 }
 
 .top-row-wrapper {
@@ -96,6 +114,7 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  position: relative;
 }
 
 .nav-wrapper {
@@ -130,9 +149,12 @@ button:hover {
 }
 
 .nav-heading {
-  padding-right: 0px;
+  padding-right: 3ch;
   height: 120px;
-  width: 8ch;
+}
+
+.nav-heading > li {
+  font-weight: bold;
 }
 
 .nav-heading > ul {
@@ -149,7 +171,15 @@ button:hover {
 
 .blogr-logo {
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2.5em;
+}
+
+.login-signup-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  position: relative;
+  left: 3%;
 }
 
 footer {
@@ -170,6 +200,10 @@ footer {
 
 footer > * {
   margin-left: -10%;
+}
+
+.login-link {
+  margin-right: 20px;
 }
 
 a {

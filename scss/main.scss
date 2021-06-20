@@ -16,13 +16,20 @@ h2,h3,h4,h5,h6 {
 }
 
 button {
+  // todo: change ubuntu variable to $body_text or something
   font-family: $ubuntu;
   border: 1px solid white;
   padding: 9px 18px;
-  border-radius: 1.25em;
-  background-color: white;
+  border-radius: 1.5em;
+  background-color: transparent;
   font-weight: 500;
-  color: $cta-text-color;
+  color: white;
+
+  width: 9em;
+  height: 3em;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1em;
 }
 
 ul {
@@ -35,12 +42,22 @@ nav {
   display: flex;
   flex-direction: row;
   position: relative;
-  /* ? is this good practice? */
-  left: -20%;
+  align-items: baseline;
+  
 }
 
 nav > ul {
   padding-left: 2em;
+  color:hsl(0, 0%, 95%);
+  
+}
+
+nav > ul:first-of-type {
+  margin-left: 3em;
+}
+
+.arrow-sml {
+  font-size: .75em;
 }
 
 p {
@@ -50,29 +67,34 @@ p {
 
 h1 {
   text-align: center;
-  font-size: 3em;
+  font-size: 3.75em;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 header {
   color: $light-text-color;
-  background-size: 125%;
   background-repeat: no-repeat;
-  background-position: right;
   /* background-blend-mode: lighten; */
-  /* background-image: linear-gradient(to left, hsl(353, 100%, 62%), hsl(13, 100%, 72%)),url("./images/bg-pattern-intro.svg"); */
-  background-image: linear-gradient(
-      to left,
-      hsl(353, 100%, 62%, 0.95),
-      hsl(13, 100%, 72%, 0.9)
-    ),
-    url("../images/bg-pattern-intro.svg");
-  padding: 20px 0px 100px 0px;
+  background-image:
+    url("../images/bg-pattern-intro.svg"), 
+    linear-gradient(to left, 	hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+  background-position: -450px 52%, 0;
+  background-size: 230%, 100%;  
+  padding: 50px 0px 150px 0px;
   border-bottom-left-radius: 100px;
   margin-bottom: 100px;
 }
 
-header > h4 {
+header > h3 {
+  
   text-align: center;
+  // this is white with lightness brought down
+  color: hsl(0, 0%, 90%);
+  font-weight: 100;
+  font-size: 1.25em;
+  margin-top: 0.5em;
+  margin-bottom: 2em; 
 }
 
 main > h2 {
@@ -95,19 +117,20 @@ h3 {
   justify-content: center;
 }
 
-.hdr-btm-buttons > button {
-  width: 10em;
-  margin-left: 10px;
-  margin-right: 10px;
+.cta-button {
+  background-color: white;
+  color: hsl(353, 100%, 62%);
 }
+
 
 .top-row-wrapper {
   width: 80%;
   margin: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: row;  
   justify-content: space-between;
   align-items: baseline;
+  position: relative;
 }
 
 .nav-wrapper {
@@ -143,9 +166,15 @@ button:hover {
 }
 
 .nav-heading {
-  padding-right: 0px;
+  padding-right: 3ch;
+
   height: 120px;
-  width: 8ch;
+  
+}
+
+.nav-heading > li  {
+  font-weight: bold;
+ 
 }
 
 .nav-heading > ul {
@@ -162,7 +191,16 @@ button:hover {
 
 .blogr-logo {
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2.5em;
+}
+
+.login-signup-wrapper {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  position: relative;
+  left: 3%;
 }
 
 footer {
@@ -183,6 +221,10 @@ footer {
 
 footer > * {
   margin-left: -10%;
+}
+
+.login-link {
+  margin-right: 20px;
 }
 
 a {
