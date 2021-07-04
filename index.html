@@ -23,7 +23,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
     <title>Frontend Mentor | [Blogr]</title>
 
@@ -34,9 +34,9 @@
       <div class="top-row-wrapper">
         <nav>
             <div class="blogr-logo">Blogr</div>
-            <ul class="nav-heading">
+            <ul class="nav-heading" onmouseover="showMenu(this)" onmouseout="hideMenu(this)">
               <li >Product &nbsp;<i class="fas fa-chevron-down arrow-sml"></i>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <ul class="nav-inner-list">
+              <ul class="nav-inner-list hide">
                 <li>Overview</li>
                 <li>Pricing</li>
                 <li>Marketplace</li>
@@ -44,18 +44,18 @@
                 <li>Integrations</li>
               </ul>
             </ul>
-            <ul class="nav-heading">
+            <ul class="nav-heading" onmouseover="showMenu(this)" onmouseout="hideMenu(this)">
               <li >Company &nbsp;<i class="fas fa-chevron-down arrow-sml"></i>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <ul class="nav-inner-list">
+              <ul class="nav-inner-list hide">
                 <li>About</li>
                 <li>Team</li>
                 <li>Blog</li>
                 <li>Careers</li>
               </ul>
             </ul>
-            <ul class="nav-heading">
+            <ul class="nav-heading" onmouseover="showMenu(this)" onmouseout="hideMenu(this)">
               <li >Connect &nbsp;<i class="fas fa-chevron-down arrow-sml"></i></li>
-              <ul class="nav-inner-list">
+              <ul class="nav-inner-list hide">
                 <li>Contact</li>
                 <li>Newsletter</li>
                 <li>LinkedIn</li>
@@ -177,4 +177,5 @@
       >. Coded by <a href="#">Edward Smith</a>.
     </div>
   </body>
+  <script src="js/index.js"></script>
 </html>
