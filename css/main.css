@@ -157,6 +157,14 @@ button:hover {
   font-weight: bold;
 }
 
+.nav-heading > li > span:hover {
+  text-decoration: underline;
+}
+
+.nav-inner-list > li:hover {
+  font-weight: bold;
+}
+
 .hide {
   display: none;
 }

@@ -174,7 +174,15 @@ button:hover {
 
 .nav-heading > li  {
   font-weight: bold;
- 
+  
+}
+
+.nav-heading > li > span:hover {
+  text-decoration: underline;
+}
+
+.nav-inner-list > li:hover {
+  font-weight: bold;
 }
 
 .hide {

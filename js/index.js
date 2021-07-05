@@ -1,47 +1,20 @@
-// write function to make menu appear on hover
+const productListControl = document.getElementById('product-list-control');
+const productList = document.getElementById('product-list');
+// todo these are based on ids... how to make it generic for classes
+productListControl.addEventListener("mouseenter", () => {
+  productList.classList.replace('hide', 'show');
+  console.log(productListControl.childNodes)
+  productListControl.childNodes[2].classList.replace('fa-chevron-down', 'fa-chevron-up');
+});
 
-// jQuery?
+productListControl.addEventListener("mouseleave", (e) => {  
+  // if user navigates to an <li> they must be still in the menu, so don't hide it
+  if(e.toElement.nodeName === 'LI') return;
+  productList.classList.replace('show', 'hide');
+  productListControl.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');  
+});
 
-/* -- THIS IS THE CSS THAT USED TO DISPLAY THE MENU
-.nav-heading:hover ul {
-  display: inline;
-}
-
-.nav-inner-list > li:hover {
-  font-weight: bold;
-}
-
-HTML FOR THE DOWN ARROW
-<i class="fas fa-chevron-down arrow-sml"></i>
-
-HTML for the UP ARROW
-
-<i class="fas fa-chevron-up"></i>
-
-so if i replace fa-chevron-down with fa-chevron-up
-
-*/
-
-// const menuHeadings = document.querySelectorAll(".nav-heading > li > i");
-// console.log(menuHeadings);
-
-
-const showMenu = (menuHeading) => {
-  const chevron = menuHeading.childNodes[1].childNodes[1];
-  const menu = menuHeading.childNodes[3];
- 
-
-  chevron.classList.replace('fa-chevron-down', 'fa-chevron-up');
-  menu.classList.replace('hide', 'show');
-}
-const hideMenu = (menuHeading) => {
-
-  const chevron = menuHeading.childNodes[1].childNodes[1];
-  const menu = menuHeading.childNodes[3];
-
-  chevron.classList.replace('fa-chevron-up', 'fa-chevron-down');
-  menu.classList.replace('show', 'hide');
-
-}
-
-
+productList.addEventListener("mouseleave", () => { 
+  productList.classList.replace('show', 'hide');
+  productListControl.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');
+});
