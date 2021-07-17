@@ -14,7 +14,7 @@ body {
   font-size: 16px;
 }
 
-h2,h3,h4,h5,h6 {
+h3,h4,h5,h6 {
   color: $heading-color;
 }
 
@@ -50,13 +50,13 @@ nav {
 }
 
 nav > ul {
-  padding-left: 2em;
+  padding-left: .75em;
   color:hsl(0, 0%, 95%);
   
 }
 
 nav > ul:first-of-type {
-  margin-left: 3em;
+  margin-left: 4em;
 }
 
 .arrow-sml {
@@ -164,8 +164,14 @@ h3 {
 }
 
 button:hover {
-  background-color: hsl(13, 100%, 72%);
+  background-color: $cta-hover-bg-color;
   color: white;
+  border: none;
+}
+
+.hover-white-button:hover {
+  background-color: white;
+  color: $cta-hover-bg-color;
 }
 
 .nav-heading {
@@ -182,17 +188,9 @@ button:hover {
   text-decoration: underline;
 }
 
-// todo this doesn't work but if it's posititioned absolutely inside a different box... maybe
+// ? why does this work?  a different box... maybe
 
-#product-list {  
-  position: absolute;
-}
-
-#company-list {  
-  position: absolute;
-}
-
-#connect-list {  
+#product-list, #company-list, #connect-list {  
   position: absolute;
 }
 
@@ -202,8 +200,10 @@ button:hover {
   width: 7vw;
   padding-right: 3vw;
   padding-left: 2vw;
-  padding-bottom: 2vh;
-  margin-left: -2vh;  
+  padding-bottom: 6px;
+  margin-left: -2vw;
+  font-size: .9em;
+    
 }
 
 .nav-inner-list > li:first-child {  
@@ -286,6 +286,10 @@ a {
   margin-bottom: 1em;
   font-weight: bold;
   color: white;
+}
+
+.footer-ctgry ~ li > a:hover {
+  text-decoration: underline;
 }
 
 /* image background classes */
