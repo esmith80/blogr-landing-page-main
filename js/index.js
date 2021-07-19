@@ -39,6 +39,7 @@ const productList = document.getElementById('product-list');
 const companyList = document.getElementById('company-list');
 const connectList = document.getElementById('connect-list');
 
+
 // product list event listeners
 
 productListControl.addEventListener("mouseenter", () => {
@@ -88,4 +89,63 @@ connectListArea.addEventListener("mouseleave", () => {
 connectList.addEventListener("mouseleave", () => { 
   connectList.classList.replace('show', 'hide');
   connectListControl.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');
+});
+
+// mobile elements and event listeners
+
+const mobileOverlay = document.querySelector('.mobile-overlay');
+const hamburger = document.querySelector('.hamburger-icon');
+const closeControl = document.querySelector('.close-mobile-control');
+const mobileNavMenu = document.querySelector('#mobile-nav-menu');
+
+
+hamburger.addEventListener("click", () => {
+  mobileOverlay.style.display = "flex";
+  hamburger.style.display = "none";
+  closeControl.style.display = "block";
+  mobileNavMenu.style.display = "flex";
+});
+
+closeControl.addEventListener("click", () => {
+  mobileOverlay.style.display = "none";
+  hamburger.style.display = "block";
+  closeControl.style.display = "none";
+  mobileNavMenu.style.display = "none";
+});
+
+
+// mobile menu controls
+
+const productListAreaMobile = document.querySelector('#product-list-area-mobile');
+const companyListAreaMobile = document.querySelector('#company-list-area-mobile');
+const connectListAreaMobile = document.querySelector('#connect-list-area-mobile');
+
+const productListControlMobile = document.getElementById('product-list-control-mobile');
+const companyListControlMobile = document.getElementById('company-list-control-mobile');
+const connectListControlMobile = document.getElementById('connect-list-control-mobile');
+const productListMobile = document.getElementById('product-list-mobile');
+const companyListMobile = document.getElementById('company-list-mobile');
+const connectListMobile = document.getElementById('connect-list-mobile');
+
+let productListOpen = false;
+
+// MOBILE product list event listeners
+
+
+
+productListControlMobile.addEventListener("click", () => {
+
+  if(!productListOpen) {
+    productListOpen = true;
+    productListMobile.classList.replace('hide', 'show');
+    productListMobile.classList.add('block');
+
+    productListControlMobile.childNodes[2].classList.replace('fa-chevron-down', 'fa-chevron-up');
+  } else {
+    productListOpen = false;
+    productListMobile.classList.replace('show', 'hide');
+    productListMobile.classList.remove('block');
+
+    productListControlMobile.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');
+  }
 });

@@ -135,8 +135,6 @@ h3 {
   width: 50%;
   padding-left: 10%;
   padding-right: 10%;
-  /* margin-top: 10%; */
-  /* margin-bottom: 30%; */
 }
 
 .img-wrapper {
@@ -308,6 +306,108 @@ a {
 
 section {
   width: 100%;
+}
+
+#editor-desktop {
+  display: none;
+}
+
+.mobile-top-row {
+  display: none;
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  height: 80%;
+  width: 90%;
+  left: 5%;
+  top: 15%;
+  background-color: white;
+  color: #2c2d3f;
+  border-radius: 5px;
+}
+
+.close-mobile-control {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .editor-desktop, .laptop-desktop, .phones-circles {
+    background-image: none;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-wrapper {
+    display: none;
+  }
+
+  .text-content-wrapper {
+    width: auto;
+    margin: auto;
+  }
+
+  .laptop-desktop > div {
+    padding-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #editor-desktop {
+    display: inline;
+    width: 100%;
+  }
+
+  p, h3, h4, h5, h6 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .top-row-wrapper {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav, .login-signup-wrapper {
+    display: none;
+  }
+
+  .mobile-top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  #mobile-nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 1.5em;
+    position: static;
+  }
+
+  #product-list-mobile, #company-list-mobile, #connect-list-mobile {
+    position: static;
+  }
+
+  #product-list-mobile > li {
+    width: 100%;
+    background-color: gray;
+  }
+
+  .salmon {
+    color: salmon;
+  }
+
+  .block {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

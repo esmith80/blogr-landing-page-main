@@ -31,8 +31,70 @@
   </head>
   <body>
     <header>
-      <div class="top-row-wrapper">
-        <nav>
+      <!-- only appears on mobile view -->
+      <div class="mobile-top-row">
+        <div class="blogr-logo">Blogr</div>
+        <div class="hamburger-icon"><i class="fas fa-bars fa-2x"></i></div> 
+        <div class="close-mobile-control"><i class="fas fa-times fa-2x"></i></div>
+      </div>
+
+
+      <!-- mobile view of menus (hidden on desktop) -->
+
+      <section class="mobile-overlay">
+
+        
+  
+        <nav id="mobile-nav-menu">
+          <div>
+
+            <ul id="product-list-area-mobile" class="nav-heading">
+              <li id="product-list-control-mobile"><span>Product</span>&nbsp;&nbsp;<i class="fas fa-chevron-down arrow-sml salmon"></i></li>
+              <ul id="product-list-mobile" class="nav-inner-list hide">
+                <li>Overview</li>
+                <li>Pricing</li>
+                <li>Marketplace</li>
+                <li>Features</li>
+                <li>Integrations</li>
+              </ul>
+            </ul>
+          </div>
+
+          <div>
+            <ul id="company-list-area-mobile" class="nav-heading">
+              <li id="company-list-control-mobile"><span>Company</span>&nbsp;&nbsp;<i class="fas fa-chevron-down arrow-sml salmon"></i></li>
+              <ul id="company-list-mobile" class="nav-inner-list hide">
+                <li>About</li>
+                <li>Team</li>
+                <li>Blog</li>
+                <li>Careers</li>
+              </ul>
+            </ul>
+          </div>
+
+          <div>
+
+            <ul id="connect-list-area-mobile" class="nav-heading">
+              <li id="connect-list-control-mobile"><span>Connect</span>&nbsp;&nbsp;<i class="fas fa-chevron-down arrow-sml salmon"></i></li>
+              <ul id="connect-list-mobile" class="nav-inner-list hide">
+                <li>Contact</li>
+                <li>Newsletter</li>
+                <li>LinkedIn</li>
+              </ul>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="login-signup-wrapper">
+          <div class="login-link">Login</div>
+          <button class="cta-button">Sign Up</button>
+        </div>
+        
+      </section>
+        
+        <!-- desktop view of menus (hidden on mobile) -->
+        <div class="top-row-wrapper">
+          <nav>
             <div class="blogr-logo">Blogr</div>
             <ul id="product-list-area" class="nav-heading">
               <li id="product-list-control"><span>Product</span>&nbsp;&nbsp;<i class="fas fa-chevron-down arrow-sml"></i></li>
@@ -79,6 +141,7 @@
 
     <main>
       <h2>Designed for the future</h2>
+      <img id="editor-desktop" src="images/illustration-editor-desktop.svg">
       <section class="text-img-wrapper editor-desktop">
         <div class="text-content-wrapper">
           <h3>Introducing an extensible editor</h3>
