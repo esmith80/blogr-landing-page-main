@@ -393,20 +393,16 @@ section {
   }
 
   #product-list-mobile, #company-list-mobile, #connect-list-mobile {
-    position: static;
+    position: relative;
   }
 
-  #product-list-mobile > li {
-    width: 100%;
-    background-color: gray;
+  #product-list-mobile > li, #company-list-mobile > li, #connect-list-mobile > li {
+    width: 275%;
+    background-color: #dadada;
   }
 
   .salmon {
     color: salmon;
-  }
-
-  .block {
-    display: block;
   }
 }
 

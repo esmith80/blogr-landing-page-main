@@ -348,7 +348,6 @@ section {
 
 .mobile-overlay {
   display: none;
-  // z-index: 1;
   position: fixed;
   height: 80%;
   width: 90%;
@@ -429,21 +428,17 @@ section {
   }
   
   #product-list-mobile, #company-list-mobile, #connect-list-mobile {  
-    position: static;
+    position: relative;
     
   }
 
-  #product-list-mobile > li {
-    width: 100%;
-    background-color: gray;
+  #product-list-mobile > li, #company-list-mobile > li, #connect-list-mobile > li {
+    width: 275%;
+    background-color: rgb(218, 218, 218);
   }
   
   .salmon {
     color: salmon;
-  }
-
-  .block {
-    display: block;
   }
 
   

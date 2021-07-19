@@ -128,24 +128,52 @@ const companyListMobile = document.getElementById('company-list-mobile');
 const connectListMobile = document.getElementById('connect-list-mobile');
 
 let productListOpen = false;
+let companyListOpen = false;
+let connectListOpen = false;
 
 // MOBILE product list event listeners
-
-
 
 productListControlMobile.addEventListener("click", () => {
 
   if(!productListOpen) {
     productListOpen = true;
     productListMobile.classList.replace('hide', 'show');
-    productListMobile.classList.add('block');
-
     productListControlMobile.childNodes[2].classList.replace('fa-chevron-down', 'fa-chevron-up');
   } else {
     productListOpen = false;
     productListMobile.classList.replace('show', 'hide');
-    productListMobile.classList.remove('block');
-
     productListControlMobile.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');
+  }
+});
+
+// MOBILE company list event listeners
+
+
+companyListControlMobile.addEventListener("click", () => {
+
+  if(!companyListOpen) {
+    companyListOpen = true;
+    companyListMobile.classList.replace('hide', 'show');
+    companyListControlMobile.childNodes[2].classList.replace('fa-chevron-down', 'fa-chevron-up');
+  } else {
+    companyListOpen = false;
+    companyListMobile.classList.replace('show', 'hide');
+    companyListControlMobile.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');
+  }
+});
+
+// MOBILE connect list event listeners
+
+
+connectListControlMobile.addEventListener("click", () => {
+
+  if(!connectListOpen) {
+    connectListOpen = true;
+    connectListMobile.classList.replace('hide', 'show');
+    connectListControlMobile.childNodes[2].classList.replace('fa-chevron-down', 'fa-chevron-up');
+  } else {
+    connectListOpen = false;
+    connectListMobile.classList.replace('show', 'hide');
+    connectListControlMobile.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');
   }
 });
