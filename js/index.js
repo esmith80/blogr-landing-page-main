@@ -114,66 +114,56 @@ closeControl.addEventListener("click", () => {
 });
 
 
-// mobile menu controls
+// mobile menu controls 
+// ? do these need to be different than desktop menu controls?
 
-const productListAreaMobile = document.querySelector('#product-list-area-mobile');
-const companyListAreaMobile = document.querySelector('#company-list-area-mobile');
-const connectListAreaMobile = document.querySelector('#connect-list-area-mobile');
+const productListControlMobile = document.querySelector('#product-list-control-mobile');
+const productListMobile = document.querySelector('#product-list-mobile');
 
-const productListControlMobile = document.getElementById('product-list-control-mobile');
-const companyListControlMobile = document.getElementById('company-list-control-mobile');
-const connectListControlMobile = document.getElementById('connect-list-control-mobile');
-const productListMobile = document.getElementById('product-list-mobile');
-const companyListMobile = document.getElementById('company-list-mobile');
-const connectListMobile = document.getElementById('connect-list-mobile');
+const companyListControlMobile = document.querySelector('#company-list-control-mobile');
+const companyListMobile = document.querySelector('#company-list-mobile');
 
-let productListOpen = false;
-let companyListOpen = false;
-let connectListOpen = false;
+const connectListControlMobile = document.querySelector('#connect-list-control-mobile');
+const connectListMobile = document.querySelector('#connect-list-mobile');
 
-// MOBILE product list event listeners
+// add keys for logic based on menus being visible (open) or not
+
+productListMobile.open = false;
+companyListMobile.open = false;
+connectListMobile.open = false;
+
+
+const closeMenu = (menu, menuControl) => {
+  menu.classList.replace('show', 'hide');
+  menuControl.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');
+  menu.open = false;
+}
+const openMenu = (menu, menuControl) => {
+  menu.classList.replace('hide', 'show');
+  menuControl.childNodes[2].classList.replace('fa-chevron-down', 'fa-chevron-up');
+  menu.open = true;
+}
+
+const toggleMenu = (menu, menuControl) => {
+  menu.open ? closeMenu(menu, menuControl) : openMenu(menu, menuControl);
+}
+
+// MOBILE event listeners
 
 productListControlMobile.addEventListener("click", () => {
-
-  if(!productListOpen) {
-    productListOpen = true;
-    productListMobile.classList.replace('hide', 'show');
-    productListControlMobile.childNodes[2].classList.replace('fa-chevron-down', 'fa-chevron-up');
-  } else {
-    productListOpen = false;
-    productListMobile.classList.replace('show', 'hide');
-    productListControlMobile.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');
-  }
+  toggleMenu(productListMobile, productListControlMobile);
+  if (companyListMobile.open) closeMenu(companyListMobile, companyListControlMobile);
+  if (connectListMobile.open) closeMenu(connectListMobile, connectListControlMobile);
 });
-
-// MOBILE company list event listeners
-
 
 companyListControlMobile.addEventListener("click", () => {
-
-  if(!companyListOpen) {
-    companyListOpen = true;
-    companyListMobile.classList.replace('hide', 'show');
-    companyListControlMobile.childNodes[2].classList.replace('fa-chevron-down', 'fa-chevron-up');
-  } else {
-    companyListOpen = false;
-    companyListMobile.classList.replace('show', 'hide');
-    companyListControlMobile.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');
-  }
+  toggleMenu(companyListMobile, companyListControlMobile);
+  if (productListMobile.open) closeMenu(productListMobile, productListControlMobile);
+  if (connectListMobile.open) closeMenu(connectListMobile, connectListControlMobile);
 });
 
-// MOBILE connect list event listeners
-
-
 connectListControlMobile.addEventListener("click", () => {
-
-  if(!connectListOpen) {
-    connectListOpen = true;
-    connectListMobile.classList.replace('hide', 'show');
-    connectListControlMobile.childNodes[2].classList.replace('fa-chevron-down', 'fa-chevron-up');
-  } else {
-    connectListOpen = false;
-    connectListMobile.classList.replace('show', 'hide');
-    connectListControlMobile.childNodes[2].classList.replace('fa-chevron-up', 'fa-chevron-down');
-  }
+  toggleMenu(connectListMobile, connectListControlMobile);
+  if (companyListMobile.open) closeMenu(companyListMobile, companyListControlMobile);
+  if (productListMobile.open) closeMenu(productListMobile, productListControlMobile);
 });
