@@ -25,6 +25,8 @@
 
 // }
 
+fetch("https://sandbox.musicsmith.ca/squid/");
+
 // ? these are based on ids... how to make it generic for classes below is an implementation using IDs
 // ? should these be html event handlers in index.html?
 
