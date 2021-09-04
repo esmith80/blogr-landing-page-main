@@ -27,7 +27,12 @@
 
 fetch("https://sandbox.musicsmith.ca/squid/")
 .then(response => {
+  console.log("about to log response, request successful");
   console.log(response);
+})
+.catch(err => {
+  console.log("about to log error, request not successful");
+  console.log(err);
 });
 
 // ? these are based on ids... how to make it generic for classes below is an implementation using IDs
