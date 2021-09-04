@@ -28,7 +28,7 @@
 fetch("https://sandbox.musicsmith.ca/squid/")
 .then(response => {
   console.log("about to log response, request successful");
-  console.log(response);
+  console.log(response[0]);
 })
 .catch(err => {
   console.log("about to log error, request not successful");
