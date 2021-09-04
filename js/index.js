@@ -25,7 +25,10 @@
 
 // }
 
-fetch("https://sandbox.musicsmith.ca/squid/");
+fetch("https://sandbox.musicsmith.ca/squid/")
+.then(response => {
+  console.log(response);
+});
 
 // ? these are based on ids... how to make it generic for classes below is an implementation using IDs
 // ? should these be html event handlers in index.html?
